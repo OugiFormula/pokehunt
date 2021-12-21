@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokehunt Control Panel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="renderhunt.js"></script>
+  </head>
+  <body class="content">
+      <button class="button is-rounded is-warning" id="import">Import Hunt</button>
+      <p>Press the button below to bind new keybinds(they will not be saved)
+        <br>
+        Click OK on the alert and right after it close it the keybind you want, these are the currently binded keys:
+        <br>
+        <p id="increasekey"></p>
+        <p id="decreasekey"></p>
+        <p id="resetkey"></p>
+      </p>
+      <button class="button is-rounded is-warning" id="keybindincrease">Keybind your counter increase</button>
+      <button class="button is-rounded is-warning" id="keybinddecrease">Keybind your counter decrease</button>
+      <button class="button is-rounded is-warning" id="keybindreset">Keybind your counter reset</button>
+
+      <hr>
+      <h1 class="title">Statistics</h1>
+      <h1 class="title">
+          Currently hunting: <span id="pokemonname"></span>
+      </h1>
+      <div class="has-text-centered">
+        <figure class="image is-128x128 is-inline-block">
+          <p><img id="pokemonimage" src=""></p>
+        </figure>
+      </div>
+      <p>Method: <span id="Method"></span>
+        <br>
+        <span id="shinyCharm"></span>
+        <br>
+        <span id="masuda"></span>
+      </p>
+      <p>Counter: 
+        <br>
+        <p id="counter"></p>
+      </p>
+      <p>Odds: <span id="Odds"></span></p>
+      <p>Timer: <span id="Timer"></span></p>
+      <hr>
+      <h1>Control Panel</h1>
+      <button class="button is-rounded" id="counterChooseBtn">Choose CurrentCounter.txt file</button>
+      <button class="button is-rounded" id="timerChooseBtn">Choose CurrentTimer.txt file</button>
+      <button class="button is-rounded" id="oddsChooseBtn">Choose CurrentOdds.txt file</button>
+      <p></p>
+      <p></p>
+      <div id="timerbuttons">
+        <button class="button is-rounded is-primary" id="playButton">Start Timer</button>
+        <button class="button is-rounded is-danger" id="pauseButton">Pause Timer</button>
+        <button class="button is-rounded is-warning" id="saveButton">Save Hunt</button>
+      </div>
+      <p></p>
+      <br>
+      <p>In Case You Want To Import Previous Hunt Please Click Below</p>
+      <button class="button is-rounded" id="previousImport">Import Previous Hunt</button>
+      <hr>
+      <h1 class="title">Statistics of previous hunt</h1>
+      <h1 class="title">
+          Previous hunting: <span id="pokemonnameprevious"></span>
+      </h1>
+      <div class="has-text-centered">
+        <figure class="image is-128x128 is-inline-block">
+          <p><img id="previouspokemonimage" src=""></p>
+        </figure>
+      </div>
+      <p>Method: <span id="previousMethod"></span></p>
+      <p>Counter: <span id="previousCounter"></span>
+        <br>
+        <span id="previousIsMasuda"></span>
+        <br>
+        <span id="previousIsShinyCharm"></span>
+      </p>
+      <p>Timer: <span id="previousTimer"></span></p>
+      <p>Odds: <span id="previousOdds"></span></p>
+      <hr>
+      <h1>Control Panel For Previous Hunt</h1>
+      <button class="button is-rounded is-warning" id="previousCounterBtn">Choose PreviousCounter.txt file</button>
+      <button class="button is-rounded is-warning" id="previousTimerBtn">Choose PreviousTimer.txt file</button>
+      <button class="button is-rounded is-warning" id="previousOddsBtn">Choose PreviousOdds.txt file</button>
+      <p></p>
+      <p></p>
+      <hr>
+      <div class="box">
+        <article class="media">
+          <div class="media-center">
+            <figure class="image is-128x128">
+              <img class="is-rounded" src="https://pbs.twimg.com/profile_images/1451854316516614148/7xYESlJY_400x400.jpg" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>YukioKoito</strong> <small></small>
+                <br>
+                <p style="letter-spacing: 0.41667em;">Code/Content Creation/Graphic Design</p>
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+  </body>
+</html>
